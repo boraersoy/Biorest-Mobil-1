@@ -60,7 +60,8 @@ const ProfileScreen = () => {
           <View style={styles.settingsSection}>
             <Text style={styles.sectionTitle}>Ayarlar</Text>
             
-            <TouchableOpacity style={styles.menuItem}>
+            <TouchableOpacity style={styles.menuItem}
+              onPress={() => navigation.navigate('AccountInfo')}>
               <View style={styles.menuItemLeft}>
                 <Ionicons name="person-outline" size={24} color="#4a90e2" />
                 <Text style={styles.menuItemText}>Hesap Bilgileri</Text>
@@ -68,7 +69,9 @@ const ProfileScreen = () => {
               <Ionicons name="chevron-forward" size={24} color="#666" />
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.menuItem}>
+            <TouchableOpacity style={styles.menuItem}
+              onPress={() => navigation.navigate('Notifications')} // Navigate to NotificationsScreen
+>
               <View style={styles.menuItemLeft}>
                 <Ionicons name="notifications-outline" size={24} color="#4a90e2" />
                 <Text style={styles.menuItemText}>Bildirimler</Text>
@@ -76,7 +79,10 @@ const ProfileScreen = () => {
               <Ionicons name="chevron-forward" size={24} color="#666" />
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.menuItem}>
+            <TouchableOpacity style={styles.menuItem}
+              onPress={() => navigation.navigate('Privacy')} // Navigate to PrivacyScreen
+
+              >
               <View style={styles.menuItemLeft}>
                 <Ionicons name="lock-closed-outline" size={24} color="#4a90e2" />
                 <Text style={styles.menuItemText}>Gizlilik</Text>
@@ -84,8 +90,12 @@ const ProfileScreen = () => {
               <Ionicons name="chevron-forward" size={24} color="#666" />
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.menuItem}>
-              <View style={styles.menuItemLeft}>
+            <TouchableOpacity style={styles.menuItem}
+  onPress={() => navigation.navigate('Help')} 
+  >
+  <View style={styles.menuItemLeft}
+              >
+                
                 <Ionicons name="help-circle-outline" size={24} color="#4a90e2" />
                 <Text style={styles.menuItemText}>Yardım</Text>
               </View>

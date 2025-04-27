@@ -36,6 +36,11 @@ export type RootStackParamList = {
     sleepData: SleepNotification;
   };
   DeviceManagement: undefined;
+  AccountInfo: undefined; // Add this line
+  Notifications: undefined; 
+  Privacy: undefined;
+  Help : undefined;
+
 };
 
 export type AuthStackParamList = {

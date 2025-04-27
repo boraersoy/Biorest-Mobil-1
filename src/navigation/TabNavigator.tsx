@@ -9,7 +9,8 @@ import DevicesScreen from '../screens/DevicesScreen';
 import StatisticsScreen from '../screens/StatisticsScreen';
 import StoreScreen from '../screens/StoreScreen';
 import ProfileScreen from '../screens/ProfileScreen';
-
+import ProfileNavigator from './ProfileStack'; // Import the ProfileNavigator
+import ProfileStack from './ProfileStack';
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
@@ -82,11 +83,11 @@ const TabNavigator = () => {
       />
       <Tab.Screen 
         name="Profile" 
-        component={ProfileScreen}
+        component={ProfileStack} // Use ProfileNavigator instead of ProfileScreen
         options={{
-          tabBarLabel: 'Profil'
+          tabBarLabel: 'Profil',
         }}
-      />
+/>    
       <Tab.Screen 
         name="Store" 
         component={StoreScreen}

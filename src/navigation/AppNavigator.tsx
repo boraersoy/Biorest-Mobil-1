@@ -15,6 +15,11 @@ import StoreScreen from '../screens/StoreScreen';
 import DeviceManagementScreen from '../screens/DeviceManagementScreen';
 import { RootStackParamList, AuthStackParamList, MainTabParamList } from './types';
 import { useAuth } from '../context/AuthContext';
+import AccountInfoScreen from '../screens/AccountInfoScreen';
+import NotificationScreen from '../screens/NotificationsScreen';
+import HelpScreen from '../screens/HelpScreen';
+import PrivacyScreen from '../screens/PrivacyScreen';
+
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 const AuthStack = createNativeStackNavigator<AuthStackParamList>();
@@ -160,6 +165,38 @@ const AppNavigator = () => {
           presentation: 'modal',
         }}
       />
+      <Stack.Screen 
+        name="AccountInfo" 
+        component={AccountInfoScreen} 
+        options={{
+          headerShown: false,
+          title: 'Hesap Bilgileri',
+        }}
+      />  
+            <Stack.Screen 
+        name="Notifications" 
+        component={NotificationScreen} 
+        options={{
+          headerShown: false,
+          title: 'Bildirimler',
+        }}
+      />
+      <Stack.Screen 
+        name="Privacy" 
+        component={PrivacyScreen} 
+        options={{
+          headerShown: false,
+          title: 'Gizlilik',
+        }}
+      />
+      <Stack.Screen 
+        name="Help" 
+        component={HelpScreen} 
+        options={{
+          headerShown: false,
+          title: 'Yardım',
+        }}
+      />    
     </Stack.Navigator>
   );
 };
